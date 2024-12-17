@@ -10,6 +10,7 @@ import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.StadiaController.Button;
 import frc.robot.commands.ArcadeDrive;
 import frc.robot.commands.ArmReset;
+import frc.robot.commands.ArmSetAngle;
 // import frc.robot.commands.ArmSetAngle;
 import frc.robot.commands.auto.AutoTime;
 import frc.robot.commands.auto.AutoDistance;
@@ -65,7 +66,7 @@ public class RobotContainer {
     new JoystickButton(controller, Button.kA.value).onTrue( new ArmReset() );
     
     //Task 5B. Bind button(s) to move the arm to different angle(s)
-
+    new JoystickButton(controller, Button.kY.value).onTrue(new ArmSetAngle(45));
 
     //[Veteran Challenge] Arm moves with Trigger
 
